@@ -22,6 +22,12 @@ def news():
     print(news_list)
     return render_template('news.html', news=news_list)
 
+@app.route('/ochered')
+def ochered():
+    param = {}
+    param['username'] = "Ученик Яндекс.Лицея"
+    #param['title'] = 'Домашняя страница'
+    return render_template('ochered.html', **param)
 
 if __name__ == '__main__':
     app.run(port=8000, host='127.0.0.1')
