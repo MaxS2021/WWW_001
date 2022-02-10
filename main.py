@@ -46,7 +46,7 @@ def news():
     with open("news.json", "rt", encoding="utf8") as f:
         news_list = json.loads(f.read())
     print(news_list)
-    return render_template('news.html', news=news_list)
+    return render_template('news.html', title='Новости', news=news_list)
 
 @app.route('/ochered')
 def ochered():
